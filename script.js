@@ -81,11 +81,11 @@ document.addEventListener("DOMContentLoaded", () => {
   if (calcBtn) {
     const tool = localStorage.getItem("selectedTool");
     const formulaMap = {
-      T001: "(狙い目-入力値) ÷ 2",
-      T002: "(狙い目-入力値) ÷2",
-      T003: "(狙い目-入力値) ÷2",
-      T004: "(狙い目-入力値)",
-      T005: "(狙い目-入力値)"
+      T001: "(狙い目[63]-入力値) ÷ 2",
+      T002: "(狙い目[103.5]-入力値) ÷2",
+      T003: "(狙い目[150]-入力値) ÷2",
+      T004: "(狙い目[223.9-入力値)",
+      T005: "(狙い目150.4-入力値)"
     };
     const fd = document.getElementById("formula-display");
     if (fd) fd.innerText = "計算式: " + (formulaMap[tool] || "未定義");
@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
         case "T001": result = (63-n) / 2; break;
         case "T002": result = (103.5-n) / 2; break;
         case "T003": result = (150-n) / 2; break;
-        case "T004": result = 223.98-n ; break;
+        case "T004": result = 223.9-n ; break;
         case "T005": result = 150.4-n ; break;
       }
       const out = document.getElementById("result");
