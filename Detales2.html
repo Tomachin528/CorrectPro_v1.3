@@ -1,0 +1,43 @@
+<!--Detale2.html-->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-TabTitleBase="CorrectPro/品種選択"></title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body class="page-select">
+  <!-- 左上：Title.html へ戻る -->
+  <button id="backTitle-btn" onclick="backToTitle()">🏠タイトルへ戻る</button>
+
+  <!-- 左上：Detales1.html へ戻る -->
+  <button id="back-btn" onclick="backToLineSelection()">
+    ← ライン選択へ戻る
+  </button>
+
+  <!-- 右上：社員番号 + ライン名 -->
+  <div id="emp-display"></div>
+
+  <!-- ワーク品種選択エリア -->
+  <div class="line-select-container">
+    <h1 class="title">ワーク品種を選択</h1>
+    <div class="line-groups">
+      <div class="line-upper">
+        <button onclick="selectWorkType('WP001')">WP001</button>
+        <button onclick="selectWorkType('WP002')">WP002</button>
+        <button onclick="selectWorkType('WP003')">WP003</button>
+      </div>
+      <div class="line-lower">
+        <button onclick="selectWorkType('WP004')">WP004</button>
+        <button onclick="selectWorkType('WP005')">WP005</button>
+      </div>
+    </div>
+  </div>
+    <!-- 左下に表示するバージョン表記 -->
+  <div class="AppVersionDisplay">
+  </div>
+</body>
+</html>
+<!--Detale2.html-->

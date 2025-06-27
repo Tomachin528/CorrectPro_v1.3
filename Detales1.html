@@ -1,0 +1,41 @@
+<!--Detale1.html-->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-TabTitleBase="CorrectPro/ﾗｲﾝ選択"></title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body class="page-select">
+  <!-- 左上：Title.html へ戻る -->
+  <button id="backTitle-btn" onclick="backToTitle()">🏠タイトルへ戻る</button>
+
+  <!-- 左上：Title.html へ戻る -->
+  <button id="back-btn" onclick="backToTitle()">← タイトルへ戻る</button>
+
+  <!-- 右上：社員番号のみ -->
+  <div id="emp-display"></div>
+
+  <!-- ライン選択エリア -->
+  <div class="line-select-container">
+    <h1 class="title">ライン名を選択</h1>
+    <div class="line-groups">
+      <div class="line-upper">
+        <button onclick="goToLine('HS101')">HS101</button>
+        <button onclick="goToLine('HS102')">HS102</button>
+        <button onclick="goToLine('HS103')">HS103</button>
+      </div>
+      <div class="line-lower">
+        <button onclick="goToLine('HS001')">HS001</button>
+        <button onclick="goToLine('HS002')">HS002</button>
+        <button onclick="goToLine('HS003')">HS003</button>
+      </div>
+    </div>
+  </div>
+    <!-- 左下に表示するバージョン表記 -->
+  <div class="AppVersionDisplay">
+  </div>
+</body>
+</html>

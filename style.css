@@ -1,0 +1,348 @@
+/* ==========================================================================  
+   style.css — 共通スタイル & レスポンシブ対応  
+============================================================================ */
+
+/* 0) グローバルリセット & フォント設定 */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", sans-serif;
+  overscroll-behavior: none;
+}
+
+/* 左下：バージョン表記 */
+.AppVersionDisplay {
+  position: fixed;
+  bottom: 8px;
+  left: 12px;
+  font-size: 12px;
+  color: #888;
+  opacity: 0.7;
+  z-index: 99;
+  pointer-events: none;
+}
+
+/* 1) 背景設定 */
+body.title-page {
+  position: relative;
+  background:
+    linear-gradient(to bottom, rgba(255,255,255,0.6), rgba(255,255,255,0.6)),
+    url("images/CorrectPro_background2.png?v=4") center/cover no-repeat;
+  height: 100vh;
+  padding-left: 40px;
+}
+body.page-select {
+  background: url("images/CorrectPro_background1.png?v=4") center/cover no-repeat;
+  text-align: center;
+}
+
+/* 2) 左上ボタン類 */
+#back-btn, #backTitle-btn {
+  position: absolute;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background .2s;
+}
+#back-btn {
+  top: 12px;
+  left: 12px;
+  background: #555;
+  color: #fff;
+}
+#back-btn:hover {
+  background: #333;
+}
+#backTitle-btn {
+  top: 12px;
+  right: 12px;
+  background: #1edc9d;
+  color: #fff;
+}
+#backTitle-btn:hover {
+  background: #085f4c;
+}
+
+/* 3) 右上：社員情報 */
+#emp-display {
+  position: absolute;
+  top: 50px;
+  right: 24px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #444;
+  text-align: right;
+  line-height: 1.4;
+  z-index: 10;
+}
+
+/* 4) タイトル＆ログイン */
+.title-container {
+  position: absolute;
+  top: 40px;
+  left: 6%;
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+.main-title {
+  font-size: 56px;
+  margin: 0;
+}
+.correct {
+  font-size: 56px;
+  font-weight: 900;
+  color: #000;
+  text-shadow: -1px -1px #fff, 1px -1px #fff, -1px 1px #fff, 1px 1px #fff;
+  margin-right: 6px;
+}
+.pro {
+  font-size: 46px;
+  font-weight: 900;
+  color: #8b0000;
+}
+.sub-title {
+  display: block;
+  margin-top: 4px;
+  font-size: 20px;
+  color: #888;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+.login-section {
+  position: absolute;
+  top: 22%;
+  left: 5%;
+  width: 90%;
+  max-width: 340px;
+}
+.instructions {
+  background: rgba(255,255,255,0.8);
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  margin-bottom: 12px;
+  white-space: nowrap;
+}
+#employee-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+#employee-form input {
+  font-size: 16px;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 100%;
+}
+#employee-form .btn {
+  height: 38px;
+  font-size: 15px;
+  font-weight: bold;
+  background: #007acc;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 100%;
+  box-shadow: 0 3px 0 #005f99;
+  transition: transform .15s, box-shadow .15s;
+}
+#employee-form .btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 #004b7c;
+}
+
+/* 5) 選択ボタン群 */
+.line-select-container {
+  margin-top: 80px;
+}
+.title {
+  font-size: 24px;
+  color: #333;
+}
+.line-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+}
+.line-upper, .line-lower {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.line-upper button,
+.line-lower button,
+.tool-set button {
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  background: rgba(0,123,204,0.9);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background .2s;
+}
+.line-upper button:hover,
+.line-lower button:hover,
+.tool-set button:hover {
+  background: #005f99;
+}
+
+/* 6) Detales4.html 用：補正計算と画像表示 */
+.flex-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  align-items: flex-start;
+}
+.image-note-box {
+  max-width: 250px;
+  text-align: center;
+}
+.image-note-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+.image-note-box .note {
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  color: #444;
+}
+#calc-form {
+  display: inline-block;
+  text-align: left;
+  margin-top: 40px;
+  padding: 16px;
+  background: rgba(255,255,255,0.88);
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.25);
+}
+#formula-display {
+  font-size: 14px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+#operator-input {
+  font-size: 16px;
+  padding: 6px;
+  width: 100%;
+  margin: 8px 0;
+  border: 1.5px solid #aaa;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+#calculate-btn {
+  padding: 8px 14px;
+  font-size: 15px;
+  font-weight: bold;
+  background: #007acc;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background .2s;
+}
+#calculate-btn:hover {
+  background: #005f99;
+}
+/* 略：前半はそのままでOK。最後まで記載するため、後半部分のみ補完します。 */
+
+/* 7) レスポンシブ対応 */
+@media only screen and (max-width:1024px) {
+  .login-section {
+    max-width: 180px;
+    width: 50%;
+  }
+  .instructions {
+    width: 110%;
+    text-align: left;
+  }
+  #employee-form input,
+  #employee-form .btn {
+    width: 100%;
+  }
+  .line-upper button,
+  .line-lower button {
+    max-width: 100px;
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+  #calc-form {
+    max-width: 260px;
+    width: 90%;
+    margin: 40px auto 0;
+  }
+  .image-note-box {
+    max-width: 200px;
+  }
+  .image-note-box .note {
+    font-size: 0.85rem;
+  }
+}
+
+@media only screen and (max-width:768px) {
+  .login-section {
+    max-width: 160px;
+    width: 50%;
+  }
+  .instructions {
+    width: 115%;
+    text-align: left;
+    font-size: 13px;
+    margin-top: 40px;
+    margin-bottom: 1px;
+  }
+  #employee-form input,
+  #employee-form .btn {
+    width: 100%;
+    font-size: 14px;
+    height: 36px;
+  }
+  .line-upper button,
+  .line-lower button {
+    max-width: 80px;
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+  #calc-form {
+    max-width: 160px;
+    width: 90%;
+    margin: 30px auto 0;
+    padding: 12px;
+  }
+  #operator-input {
+    font-size: 14px;
+    padding: 4px;
+  }
+  #calculate-btn {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+  #emp-display {
+    font-size: 12px;
+  }
+  .image-note-box {
+    max-width: 150px;
+  }
+  .image-note-box .note {
+    font-size: 0.8rem;
+  }
+}

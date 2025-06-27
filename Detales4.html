@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-TabTitleBase="CorrectPro/補正計算"></title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <style>
+    .flex-box {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      align-items: flex-start;
+    }
+    .image-note-box {
+      max-width: 250px;
+      text-align: center;
+    }
+    .image-note-box img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    .image-note-box .note {
+      margin-bottom: 6px;
+      font-size: 0.9rem;
+      color: #444;
+    }
+  </style>
+</head>
+<body class="page-select">
+  <!-- 左上：Title.html へ戻る -->
+  <button id="backTitle-btn" onclick="backToTitle()">🏠タイトルへ戻る</button>
+
+  <!-- 左上：Detales3.html へ戻る -->
+  <button id="back-btn" onclick="backToToolSelection()">← ツール選択へ戻る</button>
+
+  <!-- 右上：社員番号 + ライン名 + ワーク品種 + ツール -->
+  <div id="emp-display"></div>
+
+  <!-- 補正計算フォーム -->
+  <div class="line-select-container">
+    <h1 class="title">補正計算入力</h1>
+    <div class="flex-box">
+      <!-- 左側：画像と注記 -->
+      <div class="image-note-box">
+        <div class="note">シリンダーゲージにて2方向測定した平均とする</div>
+        <img src="images/CylinderGage_Gear1.png" alt="CylinderGage measurement image" />
+      </div>
+
+      <!-- 右側：計算式と入力 -->
+      <div id="calc-form">
+        <p id="formula-display"></p>
+        <label for="operator-input">逃がし時測定値：</label>
+        <input
+          type="number"
+          id="operator-input"
+          inputmode="decimal"
+          placeholder="数値を入力"
+          autocomplete="off"
+        />
+        <br />
+        <button id="calculate-btn">計算する</button>
+        <div id="result" style="margin-top:10px; font-weight:bold;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 左下に表示するバージョン表記 -->
+  <div class="AppVersionDisplay"></div>
+</body>
+</html>

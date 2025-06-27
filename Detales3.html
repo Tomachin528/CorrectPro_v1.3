@@ -1,0 +1,43 @@
+<!--Detale3.html-->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-TabTitleBase="CorrectPro/ﾂｰﾙ選択"></title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body class="page-select">
+  <!-- 左上：Title.html へ戻る -->
+  <button id="backTitle-btn" onclick="backToTitle()">🏠タイトルへ戻る</button>
+
+  <!-- 左上：Detales2.html へ戻る -->
+  <button id="back-btn" onclick="backToWorkSelection()">
+    ← ワーク品種選択へ戻る
+  </button>
+
+  <!-- 右上：社員番号 + ライン名 + ワーク品種 -->
+  <div id="emp-display"></div>
+
+  <!-- ツール選択エリア -->
+  <div class="line-select-container">
+    <h1 class="title">ツールを選択</h1>
+    <div class="line-groups">
+      <div class="line-upper">
+        <button onclick="selectTool('T001')">T001</button>
+        <button onclick="selectTool('T002')">T002</button>
+        <button onclick="selectTool('T003')">T003</button>
+      </div>
+      <div class="line-lower">
+        <button onclick="selectTool('T004')">T004</button>
+        <button onclick="selectTool('T005')">T005</button>
+      </div>
+    </div>
+  </div>
+    <!-- 左下に表示するバージョン表記 -->
+  <div class="AppVersionDisplay">
+  </div>
+</body>
+</html>
+<!--Detale3.html-->

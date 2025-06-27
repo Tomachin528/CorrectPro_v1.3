@@ -1,0 +1,45 @@
+<!--Title.html-->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-TabTitleBase="CorrectPro/ﾗｲﾝ選択"></title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body class="title-page">
+  <!-- Title画面では右上情報表示不要 -->
+
+  <!-- タイトル表示 -->
+  <div class="title-container">
+    <h1 class="main-title">
+      <span class="correct">Correct</span><span class="pro">/Pro</span>
+    </h1>
+    <span class="sub-title">～補正量自動計算ソフト～</span>
+  </div>
+
+  <!-- 社員番号入力 -->
+  <div class="login-section">
+    <p class="instructions">
+      <span class="First1">社員番号を入力してください</span>
+      <span class="First2">🛃</span>
+    </p>
+    <form id="employee-form">
+      <input
+        type="text"
+        id="empNumber"
+        name="empNumber"
+        placeholder="例: 1160445"
+        required
+        autocomplete="off"
+      />
+      <button type="submit" class="btn">ログイン</button>
+    </form>
+  </div>
+  <!-- 左下に表示するバージョン表記 -->
+  <div class="AppVersionDisplay">
+  </div>
+</body>
+</html>
+<!--Title.html-->
