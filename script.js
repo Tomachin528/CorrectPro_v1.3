@@ -101,11 +101,11 @@
 
         let result = n;
         switch (tool) {
-          case "T001": result = Math.round(((63-n) / 2)*100)/100; break;
-          case "T002": result = Math.round(((103.5-n) / 2)*100)/100; break;
-          case "T003": result = Math.round(((150-n) / 2)*100)/100; break;
-          case "T004": result = Math.round((223.9-n)*100)/100 ; break;
-          case "T005": result = Math.round((150.4-n)*100)/100 ; break;
+          case "T001": result = Math.round(((63-n) / 2)*1000)/1000; break;
+          case "T002": result = Math.round(((103.5-n) / 2)*1000)/1000; break;
+          case "T003": result = Math.round(((150-n) / 2)*1000)/1000; break;
+          case "T004": result = Math.round((223.9-n)*1000)/1000 ; break;
+          case "T005": result = Math.round((150.4-n)*1000)/1000 ; break;
         }
         const out = document.getElementById("result");
         if (out) out.innerText = "結果: " + result;
