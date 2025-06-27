@@ -291,10 +291,10 @@ body.page-select {
     margin: 40px auto 0;
   }
   .image-note-box {
-    max-width: 200px;
+    max-width: 150px;
   }
   .image-note-box .note {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -340,9 +340,9 @@ body.page-select {
     font-size: 12px;
   }
   .image-note-box {
-    max-width: 150px;
+    max-width: 80px;
   }
   .image-note-box .note {
-    font-size: 0.8rem;
+    font-size: 0.4rem;
   }
 }
