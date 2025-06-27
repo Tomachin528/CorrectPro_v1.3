@@ -8,7 +8,7 @@
 */
 // アプリ共通のバージョン番号
 // ここだけを書き換えれば、全ページの <title> が更新される
-const APP_VERSION = "1.1";
+const APP_VERSION = "1.3";
 
 window.addEventListener("DOMContentLoaded", () => {
   // data-base 属性を持つ title 要素を取得
